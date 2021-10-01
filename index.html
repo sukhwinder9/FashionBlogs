@@ -1,0 +1,156 @@
+<!DOCTYPE html">
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="This is a fashion website">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fashion Blogs</title>
+   <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+	 <link rel="stylesheet" type="text/css" href="css/style.css" media="all"/>
+   <script type="text/javascript"  src="js/jquery-2.1.1.min.js"></script>
+   <script  type="text/javascript" src="js/bootstrap.min.js"></script>
+	 <script  type="text/javascript" src="js/style.js"></script>
+
+</head>
+<body>
+
+<section id="header">
+
+ <div class="container">
+  <div class="row">
+   <div class="col-sm-12 header">
+    <nav class="navbar" role="navigation">
+			<div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+          <a class="navbar-brand" href="index.html"><span class="febulaus">FASHION BLOG</span></a>
+			</div>
+    
+			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+				<ul class="nav navbar-nav">
+          
+					<li class="active_1"><a href="index.html">HOME</a></li>
+					<li><a href="about.html">ABOUT US</a></li>
+					<li><a href="blogposts.html">BLOGPOSTS</a></li>
+					<li><a href="contact.html">CONTACT US</a></li>
+				</ul>
+			</div>
+	</nav>
+   </div>
+  </div>
+ </div>s
+</section>
+<section id="top">
+ <div class="container">
+  <div class="row">
+   <div class="col-sm-12 top">
+    <div class="col-sm-12">
+      <div class="carousel slide media-carousel" id="media">
+        <div class="carousel-inner">
+          <div class="item">
+            <div class="row">
+              <div class="col-sm-4 top_left">
+                <div class="image-item square effect6 from_top_and_bottom"><a href="../project-exam/blogs/streetfashionblog.html">
+                      <div class="img"><img src="img/pic7.jpg" alt="img"></div>
+                      </a></div>
+              </div>          
+              <div class="col-sm-4 top_left">
+                <div class="image-item square effect6 from_top_and_bottom"><a href="../project-exam/blogs/winterfashionblog.html">
+                      <div class="img"><img src="img/pic8.jpg" alt="img"></div>
+                      </a></div>
+              </div>
+              <div class="col-sm-4 top_left">
+                <div class="image-item square effect6 from_top_and_bottom"><a href="../project-exam/blogs/retrofashionblog.html">
+                      <div class="img"><img src="img/pic9.jpg" alt="img"></div>
+                      </a></div>
+              </div>        
+            </div>
+          </div>
+          <div class="item">
+            <div class="row">
+              <div class="col-sm-4">
+                <div class="image-item square effect6 from_top_and_bottom"><a href="../project-exam/blogs/londonfashionblog.html">
+                      <div class="img"><img src="img/pic1.jpg" alt="img"></div>
+                     </a></div>
+              </div>          
+              <div class="col-sm-4">
+                <div class="image-item square effect6 from_top_and_bottom"><a href="../project-exam/blogs/newyorkfashionblog.html">
+                      <div class="img"><img src="img/pic2.jpg" alt="img"></div>
+                      </a></div>
+              </div>
+              <div class="col-sm-4">
+                <div class="image-item square effect6 from_top_and_bottom"><a href="../project-exam/blogs/parisfashionblog.html">
+                      <div class="img"><img src="img/pic3.jpg" alt="img"></div>
+                     </a></div>
+              </div>        
+            </div>
+          </div>
+          <div class="item active">
+            <div class="row">
+              <div class="col-sm-4">
+                <div class="image-item square effect6 from_top_and_bottom"><a href="../project-exam/blogs/fashiondesignblog.html">
+                      <div class="img"><img src="img/pic4.jpg" alt="img"></div>
+                      </a></div>
+              </div>          
+              <div class="col-sm-4">
+                <div class="image-item square effect6 from_top_and_bottom"><a href="../project-exam/blogs/womensfashionblog.html">
+                      <div class="img"><img src="img/pic5.jpg" alt="img"></div>
+                      </a></div>
+              </div>
+              <div class="col-sm-4">
+                <div class="image-item square effect6 from_top_and_bottom"><a href="../project-exam/blogs/springfashionblog.html">
+                      <div class="img"><img src="img/pic6.jpg" alt="img"></div>
+                      </a></div>
+                
+                
+              </div>      
+            </div>
+          </div>
+        </div>
+        <a data-slide="prev" href="#media" class="left carousel-control"></a>
+        <a data-slide="next" href="#media" class="right carousel-control"></a>
+      </div>                          
+    </div>
+   </div>
+  </div>
+ </div>
+</section>
+<section id="footer">
+ <div class="container">
+   <div class="col-sm-12 footer_last">
+    <p class="website">All rights reserved | Design by Sukhwinder Kaur</p>
+   </div>
+ </section>
+ 
+<script type="text/javascript">
+	$(document).ready(function() {
+  $('#media').carousel({
+    pause: true,
+    interval: false,
+  });
+});
+	</script>
+<script type="text/javascript">
+	$(document).ready(function() {              
+    $('i.glyphicon-thumbs-up, i.glyphicon-thumbs-down').click(function(){    
+        var $this = $(this),
+        c = $this.data('count');    
+        if (!c) c = 0;
+        c++;
+        $this.data('count',c);
+        $('#'+this.id+'-bs3').html(c);
+    });      
+    $(document).delegate('*[data-toggle="lightbox"]', 'click', function(event) {
+        event.preventDefault();
+        $(this).ekkoLightbox();
+    });                                        
+}); 
+
+	</script>
+</body>
+</html>
