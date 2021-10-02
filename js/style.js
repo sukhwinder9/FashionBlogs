@@ -29,4 +29,29 @@ function validateEmail(email) {
         }else{
            return false;
         }
-      }
+}
+
+loadAllPageTitleContents();
+
+
+async function getPages(id){
+   const url = 'http://localhost/fashionblogs/wp-json/wp/v2/pages/' + id ; 
+    const response = await fetch(url);
+    const pageJson = await response.json();
+    if(id == '63'){
+        $('#streetfasion').html("<b>"+pageJson.title.rendered+"</b>");
+    }
+    if(id == '55'){
+        $('#fashiondesign').html("<b>"+pageJson.title.rendered+"</b>");
+    }
+    
+}
+
+function loadAllPageTitleContents(){
+    getPages('63');
+    getPages('55');
+}
+
+
+
+
